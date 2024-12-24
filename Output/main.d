@@ -67,3 +67,6 @@
 ..\..\output\main.o: ..\..\Driver\FreeRTOS\include\mpu_wrappers.h
 ..\..\output\main.o: ..\..\Driver\FreeRTOS\include\Task.h
 ..\..\output\main.o: ..\..\Driver\FreeRTOS\include\list.h
+..\..\output\main.o: ..\..\Driver\Hardware\motor.h
+..\..\output\main.o: ..\..\Driver\BSP\pwm.h
+..\..\output\main.o: ..\..\Driver\BSP\GPIO.h

@@ -187,7 +187,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Driver\STM32F1XX_HAL_Driver\Inc;..\..\Driver\CMSIS\Include;..\..\Users;..\..\Driver\CMSIS\Device\ST\STM32F1xx\Include;..\..\Middlewares;..\..\Driver;..\..\Driver\SYSTEM\delay;..\..\Driver\SYSTEM\sys;..\..\Driver\SYSTEM\usart;..\..\Driver\FreeRTOS\include;..\..\Driver\FreeRTOS\port\RVDS\ARM_CM3</IncludePath>
+              <IncludePath>..\..\Driver\STM32F1XX_HAL_Driver\Inc;..\..\Driver\CMSIS\Include;..\..\Users;..\..\Driver\CMSIS\Device\ST\STM32F1xx\Include;..\..\Middlewares;..\..\Driver;..\..\Driver\SYSTEM\delay;..\..\Driver\SYSTEM\sys;..\..\Driver\SYSTEM\usart;..\..\Driver\FreeRTOS\include;..\..\Driver\FreeRTOS\port\RVDS\ARM_CM3;..\..\Driver\Hardware;..\..\Driver\BSP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -757,6 +757,46 @@
               <FileName>portmacro.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Driver\FreeRTOS\port\RVDS\ARM_CM3\portmacro.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Driver/Bsp</GroupName>
+          <Files>
+            <File>
+              <FileName>pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\BSP\pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\BSP\pwm.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\BSP\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\BSP\GPIO.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Driver/Hardware</GroupName>
+          <Files>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\Hardware\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\Hardware\motor.h</FilePath>
             </File>
           </Files>
         </Group>

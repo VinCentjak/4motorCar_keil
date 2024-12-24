@@ -3,6 +3,8 @@
 #include "SYSTEM/delay/delay.h"
 #include "FreeRTOS.h"
 #include "Task.h"
+#include "motor.h"
+
 #define LED_CLK()       __HAL_RCC_GPIOB_CLK_ENABLE()
 #define LED_GPIO        GPIOB
 #define LED_PIN         GPIO_PIN_5
@@ -23,16 +25,22 @@ int main(void)
     Stm32_Clock_Init(RCC_PLL_MUL9); /* 设置时钟, 72Mhz */
     led_init();                         /* LED初始化 */
     uart_init(115200);
-    printf("running...\r\n");
+    //printf("running...\r\n");
+    motor_init();
+
+    set_motor_speed(30);
+
+    set_motor_dir(Motor_Forward);
+
     BaseType_t xReturn;
     TaskHandle_t  TestTask_Handle=NULL;
-    xReturn=xTaskCreate(vTestTask, "vTestTask", configMINIMAL_STACK_SIZE, NULL, 2, &TestTask_Handle);
+    //xReturn=xTaskCreate(vTestTask, "vTestTask", configMINIMAL_STACK_SIZE, NULL, 2, &TestTask_Handle);
 
-    if(xReturn!=pdPASS){
+    /*if(xReturn!=pdPASS){
       printf("TaskCreateFailed\n");
-    }
+    }*/
 
-    vTaskStartScheduler();                    /* 启动任务调度 */
+    //vTaskStartScheduler();                    /* 启动任务调度 */
     
     while(1)
     { 
