@@ -70,3 +70,4 @@
 ..\..\output\main.o: ..\..\Driver\Hardware\motor.h
 ..\..\output\main.o: ..\..\Driver\BSP\pwm.h
 ..\..\output\main.o: ..\..\Driver\BSP\GPIO.h
+..\..\output\main.o: ..\..\Driver\Hardware\oled.h

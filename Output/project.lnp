@@ -34,7 +34,13 @@
 "..\..\output\port.o"
 "..\..\output\pwm.o"
 "..\..\output\gpio.o"
+"..\..\output\uart.o"
+"..\..\output\i2c.o"
+"..\..\output\tim.o"
+"..\..\output\dwt.o"
 "..\..\output\motor.o"
+"..\..\output\jdy_bl.o"
+"..\..\output\oled.o"
 --library_type=microlib --strict --scatter "..\..\Output\project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

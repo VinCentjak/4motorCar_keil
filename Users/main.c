@@ -4,6 +4,7 @@
 #include "FreeRTOS.h"
 #include "Task.h"
 #include "motor.h"
+#include "oled.h"
 
 #define LED_CLK()       __HAL_RCC_GPIOB_CLK_ENABLE()
 #define LED_GPIO        GPIOB
@@ -21,16 +22,24 @@ void led_init(void);                       /* LED初始化函数声明 */
 int main(void)
 {
     HAL_Init();                         /* 初始化HAL库 */
-		delay_init(72);
     Stm32_Clock_Init(RCC_PLL_MUL9); /* 设置时钟, 72Mhz */
     led_init();                         /* LED初始化 */
-    uart_init(115200);
+    
+    OLED_GPIO_Init();
+
+    OLED_Init();
+
+    OLED_ALL_Clear();
+
+    OLED_Draw_16_8_ASCII(2,2,32);
+
+    //uart_init(115200);
     //printf("running...\r\n");
-    motor_init();
+    //motor_init();
 
-    set_motor_speed(30);
+    //set_motor_speed(30);
 
-    set_motor_dir(Motor_Forward);
+    //set_motor_dir(Motor_Forward);
 
     BaseType_t xReturn;
     TaskHandle_t  TestTask_Handle=NULL;

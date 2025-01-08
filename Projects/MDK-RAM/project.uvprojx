@@ -133,12 +133,12 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <Capability>1</Capability>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Driver\STM32F1XX_HAL_Driver\Inc;..\..\Driver\CMSIS\Include;..\..\Users;..\..\Driver\CMSIS\Device\ST\STM32F1xx\Include;..\..\Middlewares;..\..\Driver;..\..\Driver\SYSTEM\delay;..\..\Driver\SYSTEM\sys;..\..\Driver\SYSTEM\usart;..\..\Driver\FreeRTOS\include;..\..\Driver\FreeRTOS\port\RVDS\ARM_CM3;..\..\Driver\Hardware;..\..\Driver\BSP</IncludePath>
+              <IncludePath>..\..\Driver\STM32F1XX_HAL_Driver\Inc;..\..\Driver\CMSIS\Include;..\..\Users;..\..\Driver\CMSIS\Device\ST\STM32F1xx\Include;..\..\Middlewares;..\..\Driver;..\..\Driver\SYSTEM\delay;..\..\Driver\SYSTEM\sys;..\..\Driver\SYSTEM\usart;..\..\Driver\FreeRTOS\include;..\..\Driver\FreeRTOS\port\RVDS\ARM_CM3;..\..\Driver\Hardware;..\..\Driver\BSP;..\..\Driver\STM32F1XX_HAL_Driver\Inc\Legacy</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -783,6 +783,46 @@
               <FileType>5</FileType>
               <FilePath>..\..\Driver\BSP\GPIO.h</FilePath>
             </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\BSP\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\BSP\uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\BSP\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\BSP\I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>TIM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\BSP\TIM.c</FilePath>
+            </File>
+            <File>
+              <FileName>TIM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\BSP\TIM.h</FilePath>
+            </File>
+            <File>
+              <FileName>DWT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\BSP\DWT.c</FilePath>
+            </File>
+            <File>
+              <FileName>DWT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\BSP\DWT.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -797,6 +837,31 @@
               <FileName>motor.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Driver\Hardware\motor.h</FilePath>
+            </File>
+            <File>
+              <FileName>JDY_BL.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\Hardware\JDY_BL.c</FilePath>
+            </File>
+            <File>
+              <FileName>JDY_BL.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\Hardware\JDY_BL.h</FilePath>
+            </File>
+            <File>
+              <FileName>oled.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Driver\Hardware\oled.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\Hardware\oled.h</FilePath>
+            </File>
+            <File>
+              <FileName>oledfont.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Driver\Hardware\oledfont.h</FilePath>
             </File>
           </Files>
         </Group>

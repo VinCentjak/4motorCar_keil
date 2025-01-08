@@ -20,3 +20,21 @@ void motor_GPIO_init(void){
 }
 
 
+void JDYBL_GPIO_init(void){
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_AFIO_CLK_ENABLE();
+
+    GPIO_InitTypeDef GPIO_InitStruct;
+    GPIO_InitStruct.Mode=GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pin=GPIO_PIN_9;
+    GPIO_InitStruct.Speed=GPIO_SPEED_FREQ_HIGH;
+
+    HAL_GPIO_Init(GPIOA,&GPIO_InitStruct);
+
+    GPIO_InitStruct.Mode=GPIO_MODE_AF_INPUT;
+    GPIO_InitStruct.Pin=GPIO_PIN_10;
+    GPIO_InitStruct.Speed=GPIO_SPEED_FREQ_HIGH;
+
+    HAL_GPIO_Init(GPIOA,&GPIO_InitStruct);
+}
+
